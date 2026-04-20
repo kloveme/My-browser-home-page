@@ -1,6 +1,33 @@
 # My-browser-home-page
 A simple browser start page for your own configuration sharing
 
+## Example install
+
+```bash
+
+#Clone project
+git clone https://github.com/kloveme/My-browser-home-page
+
+cd My-browser-home-page
+
+ls
+
+cd ..
+
+#Create config folder
+mkdir -p ~/.config/firefox/
+
+#Copy config
+cp -r My-browser-home-page/* ~/.config/firefox/
+
+```
+
+### 1. Go to the Firefox browser and search for 'Home' Find the location shown in the picture and change the URL option to 'file:///home/your_name/.config/firefox/main.html' 
+### 2. Close the browser and reopen it to see the configured homepage
+
+<img src="pictures/example.png" style="border-radius: 10px;">
+
+
 # Images
 
 ### Search Method: 1. Search in the search box, you can select Enter to start the search
