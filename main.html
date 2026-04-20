@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>My home</title>
+        <script src="script/main.js" defer></script>
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+
+    <style>
+        body {
+              font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-image: url("static/wallpaper1.png"); background-size:1500px;
+            margin: 0;
+        }
+
+        #UserTimeMessage {
+            font-size: 21px;
+            font-style: oblique;
+        }
+        
+        #UserTime {
+            font-size: 24px;
+            font-style: italic;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        #LinkUrl {
+            border-radius: 360px;
+            transition: all 0.7s ease;
+        }
+
+        #LinkUrl img {
+            border-radius: 360px;
+        }
+
+        #LinkUrl:hover {
+            text-decoration: none;
+            transform: scaleY(1.1) scaleX(1.1) translateY(-6px);
+            border-radius: 3760px;
+        }
+
+        #ErrorWindow {
+            background: #100a0a2b;
+            backdrop-filter: blur(20px);
+            width: 15%;
+            border-radius: 10px;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+            padding: 5px;
+            height: 150px;
+            margin-top: 5%;
+            display: flex;
+            position: fixed;
+            left: 2%;
+            display: none;
+            top: 0;
+            font-size: 12px;
+            flex-direction: column;
+            justify-content: center;
+            justify-items: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        #ErrorWindow img {
+            width: 100px;
+            margin: 0px auto;
+        }
+
+        input {animation:  ImageStartAnimation 1s forwards;}
+        
+        img {animation: ImageStartAnimation 1s forwards;}
+
+
+        @keyframes ImageStartAnimation {
+            0% {opacity: 0; transform: translateY(-20px);}
+            50% {opacity: 0.44; transform: translateY(10px);}
+            100% {opacity: 1; transform: translateY(0px);}
+        }
+
+    </style>
+
+    <body>
+        <div class="main-box">
+
+            <h1 style="font-weight: bold; font-family: Arial, Helvetica, sans-serif; 
+            font-size: 33px; color: white; text-align: center;">Browser HomePage</h1>
+
+            <div id="ErrorWindow" class="main-box-error-window">
+                <img src="static/error.svg">
+                <span id="ErrorMessage">Error</span> 
+            </div>
+        
+            <div class="FastSearchWindow" id="FastSearchWindow">
+                <div class="FastSearchWindow-Title">
+                    <span>Fast serarch </span>
+                    <img src="static/fast.svg" alt="await loading icon">
+                </div>
+                <input placeholder="Search ..." id="FastSearchInformation">
+            </div>
+
+            <div class="ChangeWallpaperWindow" id="ChangeWallpaperWindow">
+                <div class="ChangeWallpaperWindow-WallpaperImageView">
+                    <span class="ChangeWallpaperWindow-WallpaperImageView-ViewTitle">& Default wallpaper &</span>
+                    <div class="ChangeWallpaperWindow-WallpaperImageView-ViewList">
+                        <img class="ChangeWallpaperWindow-WallpaperImageView-ViewList-img" src="static/wallpaper1.png" alt="await default wallapaper">
+                        <img class="ChangeWallpaperWindow-WallpaperImageView-ViewList-img" src="static/wallpaper2.png" alt="await default wallapaper">
+                        <img class="ChangeWallpaperWindow-WallpaperImageView-ViewList-img" src="static/wallpaper3.png" alt="await default wallapaper">
+                    </div>
+                </div>
+                <div class="ChangeWallpaperWindow-FunctionButton">
+                    <button id="ApplyChangeWallpaper">Apply selected wallpaper</button>
+                    <input style="display: none;" type="file" accept="image/*" id="UpdateWallpaperEntry"> 
+                    <button id="UpdateWallpaper">Update wallpaper</button>
+                </div>
+            </div>
+            
+            <div class="main-box-search">
+                <input class="main-box-search-entry" placeholder="  search ..." id="SearchInformation">
+                <button class="main-box-search-button" id="SearchButton">
+                    <img src="static/search_button.svg" alt="Await search icon">
+                </button>
+            </div>
+
+            <div class="main-box-fast-link">
+                <div class="link-box">
+                    <a id="LinkUrl" href="https://github.com">
+                        <img src="static/github.svg" id="LinkPicture" alt="await loading picture">
+                    </a>
+                    <span id="LinkName">Github</span>
+                </div>
+
+                <div class="link-box">
+                    <a id="LinkUrl" href="https://chat.deepseek.com">
+                        <img src="static/deepseek.png" id="LinkPicture" alt="await loading picture">
+                    </a>
+                    <span id="LinkName">DeepSeek</span>
+                </div>
+
+
+                <div class="link-box">
+                    <a id="LinkUrl" href="https://en.cppreference.com/cpp">
+                        <img src="static/cpp_document.png" id="LinkPicture" alt="await loading picture">
+                    </a>
+                    <span id="LinkName">C++ document</span>
+                </div>
+
+
+                <div class="link-box">
+                    <a id="LinkUrl" href="https://wallhaven.cc">
+                        <img src="static/wallhaven.jpg" id="LinkPicture" alt="await loading picture">
+                    </a>
+                    <span id="LinkName">Wallhaven</span>
+                </div>
+
+
+                <div class="link-box">
+                    <a id="LinkUrl" href="https://wiki.archlinux.org.cn">
+                        <img src="static/archlinux.svg" id="LinkPicture" alt="await loading picture">
+                    </a>
+                    <span id="LinkName">Arch wiki</span>
+                </div>
+
+            </div>
+
+            <div class="main-box-image-list">
+                <div class="main-box-image-list-title"> Hello  <strong id="UserTimeMessage" > </strong>
+                    <div></div> Now time : <strong id="UserTime"></strong></div>
+                <div class="main-box-image-list-list">
+                    <img class="list-image" src="static/list_1.jpg" alt="Await loading picture">
+                    <img class="list-image" src="static/list_2.png" alt="Await loading picture">
+                    <img class="list-image" src="static/list_3.png" alt="Await loading picture">
+                </div>
+                <br>
+            </div>
+        </div>
+    </body>
+</html> 

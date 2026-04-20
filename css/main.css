@@ -1,0 +1,297 @@
+.main-box .main-box-search {
+    background: #1c0c0c4c;
+    backdrop-filter: blur(30px);
+    border-radius: 10px;
+    color: white;
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-items: center;
+    padding: 15px;
+    margin: 2% auto;
+    max-width: 600px;
+    gap: 15px;
+}
+
+.main-box .main-box-search .main-box-search-entry {
+    width: 70%;
+    height: 40px;
+    border-radius: 25px;
+    padding: 5px;
+    background: transparent;
+    color: white;
+    font-weight: bold;
+    border: 2px solid whitesmoke;
+    color: white;
+    outline: none;
+    transition: all 0.5s ease;
+}
+
+.main-box .main-box-search .main-box-search-button {
+    width: 10%;
+    height: 50px;
+    border-radius: 360px;
+    display: flex;
+    background: transparent;
+    border: none;
+    justify-content: center;
+    transition: all 0.5s ease;
+}
+
+.main-box .main-box-search .main-box-search-button img {
+    width: 30px;
+    margin: auto;
+}
+
+.main-box .main-box-search .main-box-search-button:hover {
+    transform: rotate(25deg);
+}
+
+.main-box .main-box-search .main-box-search-entry:hover {
+    transform: scaleX(1.1);
+}
+
+.main-box .main-box-image-list {
+    width: 50%;
+    margin: 2% auto;
+    background: #1c0c0c4c;
+    padding: 10px;
+    border-radius: 10px;
+    backdrop-filter: blur(20px);
+}
+
+.main-box .main-box-image-list .main-box-image-list-list {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+}
+
+.main-box-image-list .main-box-image-list-title {
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    margin: 2% auto;
+    font-size: 20px;
+}
+
+.main-box .main-box-image-list .main-box-image-list-list .list-image {
+    width: 21%;
+    border-radius: 20px;
+    border: 2px solid white;
+    transition: all 1s ease;
+}
+
+.main-box .main-box-image-list .main-box-image-list-list .list-image:active {
+    transform: translateY(-5px) rotate(10deg);
+}
+
+.main-box .main-box-fast-link {
+    width: 50%;
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; 
+    border-radius: 10px;
+    background: #1c0c0c4c;
+    backdrop-filter: blur(20px);
+    justify-content: center;
+    margin: auto;
+}
+
+.main-box .main-box-fast-link .link-box {
+    background: transparent;
+    width: 15%;
+    padding: 10px;
+    gap: 2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    font-size: 12px;
+    border-radius: 360px;
+}
+
+.main-box .main-box-fast-link .link-box img {
+    width: 70px;
+}
+
+.open-window-animation {
+    animation: AnimationOpenWidnow 1s forwards;
+}
+
+.close-window-animation {
+    animation: AnimationCloseWindow 1s forwards;
+}
+
+@keyframes AnimationOpenWidnow {
+    0% {opacity: 0; transform: translateX(-10px);}
+    50% {opacity: 1; transform: translateX(20px);}
+    100% {opacity: 1;}
+}
+
+@keyframes AnimationCloseWindow {
+    0% { opacity: 1; trsansform: translateX(50px); }
+    50% { opacity: 0.47; transform: translateX(-150px); }
+    100% { opacity: 0; transform: translateX(0);}
+}
+
+.main-box .ChangeWallpaperWindow {
+    width: 45%;
+    height: 250px;
+    max-height: 300px;
+    border-radius: 10px;
+    background: #1c0c0c4c;
+    backdrop-filter: blur(20px);
+    padding: 2px;
+    color: white;
+    font-weight: bold;
+    display: none;
+    left: 27%;
+    top: 24%;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    position: fixed;
+    box-shadow: 5px -5px 10px #3d3d3d , 5px -6px 10px #4d4b4b;
+    z-index: 9999;
+}
+
+.main-box .ChangeWallpaperWindow .ChangeWallpaperWindow-WallpaperImageView-ViewList {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    justify-content: center;
+    justify-items: center;
+    margin: 3% auto;
+}
+
+.main-box .ChangeWallpaperWindow .ChangeWallpaperWindow-FunctionButton button {
+    width: 30%;
+    background:#150e0e00;
+    backdrop-filter: blur(20px);
+    color: white;
+    border-radius: 20px;
+    padding: 2px;
+    outline: none;
+    border: 1px solid white;
+}
+
+.main-box .ChangeWallpaperWindow .ChangeWallpaperWindow-FunctionButton {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-items: center;
+    gap: 13px;
+}
+
+.main-box .ChangeWallpaperWindow .ChangeWallpaperWindow-FunctionButton button:hover {
+    background-color: black;
+}
+
+.main-box .ChangeWallpaperWindow .ChangeWallpaperWindow-WallpaperImageView-ViewList img {
+    animation: none;
+    width: 150px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.main-box .ChangeWallpaperWindow .ChangeWallpaperWindow-WallpaperImageView-ViewList img:hover {
+    transform: translateY(-5px);
+}
+
+.open-change-window {
+    display: flex;
+    animation: OpenChangeWallpaperAnimation 1s forwards;
+}
+
+.close-change-window {
+    animation: CloseChangeWallpaperAnimation 1s forwards;
+}
+
+@keyframes CloseChangeWallpaperAnimation {
+    0% {opacity: 1; transform: translateY(0px);}
+    50% {opacity: 0.55; transform: translateY(10px);}
+    100% {opacity: 0; transform: translateY(0px);}
+}
+
+@keyframes OpenChangeWallpaperAnimation {
+    0% {opacity: 0; transform: translateY(20px);}
+    50% {opacity: 0.55; transform: translateY(-30px);}
+    60% {opacity: 0.55; transform: translateY(10px);}
+    100% {opacity: 1; transform: translateY(0px);}
+}
+
+.FastSearchWindow {
+    width: 20%;
+    height: 150px;
+    background: #1c0c0c4c;
+    display: none;
+    left: 40%;
+    top: 40%;
+    z-index: 999;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    margin: 1px auto;
+    position: fixed;
+    gap: 6px;
+    backdrop-filter: blur(20px);
+}
+
+.open-fastsearch-window {
+    display: flex;
+    animation: OpenFastSearchWindowAnimation 1s forwards;
+}
+
+.close-fastsearch-window {
+    animation: CloseFastSearchWindowAnimation 1s forwards;
+}
+
+.FastSearchWindow .FastSearchWindow-Title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    justify-items: center;
+}
+
+.FastSearchWindow input {
+    background: transparent;
+    border-radius: 20px;
+    padding: 5px;
+    border: 2px solid white;
+    color: white;
+    width: 60%;
+    outline: none;
+    margin: 5px auto;
+}
+
+.FastSearchWindow .FastSearchWindow-Title img {
+    width: 26px;
+}
+
+@keyframes OpenFastSearchWindowAnimation {
+    0% {opacity: 0; transform: translateY(10);}
+    50% {opacity: 0.66; transform: translateY(20px);}
+    100% {opacity: 1; transform: translateY(-10px);}
+}
+
+@keyframes CloseFastSearchWindowAnimation {
+    0% { opacity: 1; trsansform: translateY(0px);}
+    30% {opacity: 0.57; transform: translateY(20px);}
+    50% { opacity: 0.57; transform: translateY(-10px); }
+    100% { opacity: 0; transform: translateY(0);}
+}
